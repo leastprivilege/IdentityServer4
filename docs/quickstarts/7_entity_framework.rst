@@ -1,11 +1,30 @@
 .. _refEntityFrameworkQuickstart:
 Using EntityFramework Core for configuration and operational data
 =================================================================
+The following Identity Server 4 quickstart provides step by step instructions for various common IdentityServer scenarios. These start with the absolute basics and become more complex as they progress. We recommend that you follow them in sequence.  To see the full list of please go to `IdentityServer4 Quickstarts Overview <https://identityserver4.readthedocs.io/en/latest/quickstarts/0_overview.html>`
 
-IdentityServer is designed for extensibility, and one of the extensibility points is the storage mechanism used for data that IdentityServer needs.
-This quickstart shows how to configure IdentityServer to use EntityFramework Core (EF) as the storage mechanism for this data (rather than using the in-memory implementations we had been using up until now).
+This is quick start number seven ``Using EntityFramework Core for configuration and operational data``.  In this quick start we show how IdentityServer is designed for extensibility, and one of the extensibility points is the storage mechanism used for data that IdentityServer needs.
+This quickstart shows how to configure IdentityServer to use ``EntityFramework Core (EF)`` as the storage mechanism for this data (rather than using the in-memory implementations we had been using up until now).
 
 .. Note:: In addition to manually configuring EF support, there is also an IdentityServer template to create a new project with EF support. Use ``dotnet new is4ef`` to create it. See `here <https://www.github.com/IdentityServer/IdentityServer4.Templates>`_ for more information.
+
+This quickstart assumes that you have already completed the previous four quickstarts. If you have not we recommend that you go back and complete them first before moving on to this quickstart.
+
+Source Code
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+As with all of these quickstarts you can find the source code for it in the `IdentityServer4.Samples <https://github.com/IdentityServer/IdentityServer4.Samples>`_ project.  
+The project for this quickstart is `Quickstart #7: Using EntityFramework Core for configuration and operational data <https://github.com/IdentityServer/IdentityServer4.Samples/tree/master/Quickstarts/7_EntityFrameworkStorage>`_
+
+Preparation
+^^^^^^^^^^^
+In order to make following these quickstarts easer for you the team has created some custom templates for dotnet new.  
+
+To install the custom templates open a console window and type the following command::
+
+    dotnet new -i IdentityServer4.Templates
+
+They will be used as a starting point for the various tutorials.
 
 IdentityServer4.EntityFramework
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

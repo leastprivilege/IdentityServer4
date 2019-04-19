@@ -2,15 +2,27 @@
 Protecting an API using Passwords
 =================================
 
-The OAuth 2.0 resource owner password grant allows a client to send username and password
-to the token service and get an access token back that represents that user.
+The following Identity Server 4 quickstart provides step by step instructions for various common IdentityServer scenarios. These start with the absolute basics and become more complex as they progress. We recommend that you follow them in sequence.  To see the full list of please go to `IdentityServer4 Quickstarts Overview <https://identityserver4.readthedocs.io/en/latest/quickstarts/0_overview.html>`
 
-The spec generally recommends against using the resource owner password grant besides legacy applications that cannot host a browser.
-Generally speaking you are typically far better off using one of the interactive
-OpenID Connect flows when you want to authenticate a user and request access tokens.
+This is quickstart number two it walks you though the OAuth 2.0 resource owner password grant type.  This grant type allows a client to send username and password to the token service and get an access token back that represents that user.  The spec generally recommends against using the resource owner password grant besides legacy applications that cannot host a browser. Generally speaking you are typically far better off using one of the interactive OpenID Connect flows when you want to authenticate a user and request access tokens.
 
-Nevertheless, this grant type allows us to introduce the concept of users to our
-quickstart IdentityServer, and that's why we show it.
+This grant type allows us to introduce the concept of users to our quickstart IdentityServer.   This quickstart assumes that you have already completed `Protecting an API using Client Credentials <https://identityserver4.readthedocs.io/en/latest/quickstarts/1_client_credentials.html>`_ if you have not we recommend that you go back and complete that first before moving on to this quickstart.
+
+Source Code
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+As with all of these quickstarts you can find the source code for it in the `IdentityServer4.Samples <https://github.com/IdentityServer/IdentityServer4.Samples>`_ project.  
+The project for this quickstart is `Quickstart #2: Securing an API using the Resource Owner Password Grant <https://github.com/IdentityServer/IdentityServer4.Samples/tree/master/Quickstarts/2_ResourceOwnerPasswords>`_
+
+Preparation
+^^^^^^^^^^^
+In order to make following these quickstarts easer for you the team has created some custom templates for dotnet new.  
+
+To install the custom templates open a console window and type the following command::
+
+    dotnet new -i IdentityServer4.Templates
+
+They will be used as a starting point for the various tutorials.
 
 Adding users
 ^^^^^^^^^^^^

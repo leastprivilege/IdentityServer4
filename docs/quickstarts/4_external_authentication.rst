@@ -2,11 +2,31 @@
 Adding Support for External Authentication
 ==========================================
 
-Next we will add support for external authentication.
-This is really easy, because all you really need is an ASP.NET Core compatible authentication handler.
+The following Identity Server 4 quickstart provides step by step instructions for various common IdentityServer scenarios. These start with the absolute basics and become more complex as they progress. We recommend that you follow them in sequence.  To see the full list of please go to `IdentityServer4 Quickstarts Overview <https://identityserver4.readthedocs.io/en/latest/quickstarts/0_overview.html>`
+
+This is quickstart number four Adding Support for External Authentication.  In this quickstart you will add support for external authentication. This is really easy, because all you really need is an ASP.NET Core compatible authentication handler.
 
 ASP.NET Core itself ships with support for Google, Facebook, Twitter, Microsoft Account and OpenID Connect.
 In addition you can find implementations for many other authentication providers `here <https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers>`_.
+
+This quickstart assumes that you have already completed `Adding User Authentication with OpenID Connect <https://identityserver4.readthedocs.io/en/latest/quickstarts/3_interactive_login.html>`_ if you have not we recommend that you go back and complete that first before moving on to this quickstart.
+
+Source Code
+^^^^^^^^^^^
+
+As with all of these quickstarts you can find the source code for it in the `IdentityServer4.Samples <https://github.com/IdentityServer/IdentityServer4.Samples>`_ project.  
+
+The project for this quickstart is `Quickstart #4: Adding external Authentication <https://github.com/IdentityServer/IdentityServer4.Samples/tree/master/Quickstarts/4_ImplicitFlowAuthenticationWithExternal>`_
+
+Preparation
+^^^^^^^^^^^
+In order to make following these quickstarts easer for you the team has created some custom templates for dotnet new.  
+
+To install the custom templates open a console window and type the following command::
+
+    dotnet new -i IdentityServer4.Templates
+
+They will be used as a starting point for the various tutorials.
 
 Adding Google support
 ^^^^^^^^^^^^^^^^^^^^^

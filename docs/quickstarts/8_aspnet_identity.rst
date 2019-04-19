@@ -1,17 +1,34 @@
 .. _refAspNetIdentityQuickstart:
 Using ASP.NET Core Identity
 ===========================
+The following Identity Server 4 quickstart provides step by step instructions for various common IdentityServer scenarios. These start with the absolute basics and become more complex as they progress. We recommend that you follow them in sequence.  To see the full list of please go to `IdentityServer4 Quickstarts Overview <https://identityserver4.readthedocs.io/en/latest/quickstarts/0_overview.html>`
 
-IdentityServer is designed for flexibility and part of that is allowing you to use any database you want for your users and their data (including passwords).
+This is quickstart number eight Using ASP.NET Core Identity in this quickstart we show how IdentityServer is designed for flexibility and part of that is allowing you to use any database you want for your users and their data (including passwords).
 If you are starting with a new user database, then ASP.NET Identity is one option you could choose.
 This quickstart shows how to use ASP.NET Identity with IdentityServer.
 
-The approach this quickstart takes to using ASP.NET Identity is to create a new project for the IdentityServer host.
-This new project will replace the prior IdentityServer project we built up in the previous quickstarts.
-The reason for this new project is due to the differences in UI assets when using ASP.NET Identity (mainly around the differences in login and logout).
-All the other projects in this solution (for the clients and the API) will remain the same.
+The approach this quickstart takes to using ASP.NET Identity is to create a new project for the IdentityServer host. This new project will replace the prior IdentityServer project we built up in the previous quickstarts. The reason for this new project is due to the differences in UI assets when using ASP.NET Identity (mainly around the differences in login and logout). All the other projects in this solution (for the clients and the API) will remain the same.
 
 .. Note:: This quickstart assumes you are familiar with how ASP.NET Identity works. If you are not, it is recommended that you first `learn about it <https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity>`_.
+
+This quickstart assumes that you have already completed the previous four quickstarts. If you have not we recommend that you go back and complete them first before moving on to this quickstart.
+
+Source Code
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+As with all of these quickstarts you can find the source code for it in the `IdentityServer4.Samples <https://github.com/IdentityServer/IdentityServer4.Samples>`_ project.  
+The project for this quickstart is `Quickstart #8: Using ASP.NET Core Identity <https://github.com/IdentityServer/IdentityServer4.Samples/tree/master/Quickstarts/8_AspNetIdentity>`_
+
+Preparation
+^^^^^^^^^^^
+In order to make following these quickstarts easer for you the team has created some custom templates for dotnet new.  
+
+To install the custom templates open a console window and type the following command::
+
+    dotnet new -i IdentityServer4.Templates
+
+They will be used as a starting point for the various tutorials.
+
 
 New Project for ASP.NET Identity
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

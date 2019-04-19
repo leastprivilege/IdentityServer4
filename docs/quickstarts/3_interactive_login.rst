@@ -2,11 +2,28 @@
 Adding User Authentication with OpenID Connect
 ==============================================
 
-In this quickstart we want to add support for interactive user authentication via the
-OpenID Connect protocol to our IdentityServer.
+The following Identity Server 4 quickstart provides step by step instructions for various common IdentityServer scenarios. These start with the absolute basics and become more complex as they progress. We recommend that you follow them in sequence.  To see the full list of please go to `IdentityServer4 Quickstarts Overview <https://identityserver4.readthedocs.io/en/latest/quickstarts/0_overview.html>`
 
-Once that is in place, we will create an MVC application that will use IdentityServer for 
-authentication.
+This is quickstart number three Adding User Authentication with OpenID Connect. In this quickstart you will add support for interactive user authentication via the OpenID Connect protocol to our IdentityServer.  Once that is in place, you will create an MVC application that will use IdentityServer for authentication.
+
+This quickstart assumes that you have already completed `Adding User Authentication with OpenID Connect <https://identityserver4.readthedocs.io/en/latest/quickstarts/3_interactive_login.html>`_ if you have not we recommend that you go back and complete that first before moving on to this quickstart.
+
+ Source Code
+^^^^^^^^^^^
+
+As with all of these quickstarts you can find the source code for it in the `IdentityServer4.Samples <https://github.com/IdentityServer/IdentityServer4.Samples>`_ project.  
+
+The project for this quickstart is `Quickstart #3: User Authentication using OpenID Connect Implicit Flow <https://github.com/IdentityServer/IdentityServer4.Samples/tree/master/Quickstarts/3_ImplicitFlowAuthentication>`_
+
+Preparation
+^^^^^^^^^^^
+In order to make following these quickstarts easer for you the team has created some custom templates for dotnet new.  
+
+To install the custom templates open a console window and type the following command::
+
+    dotnet new -i IdentityServer4.Templates
+
+They will be used as a starting point for the various tutorials.
 
 Adding the UI
 ^^^^^^^^^^^^^

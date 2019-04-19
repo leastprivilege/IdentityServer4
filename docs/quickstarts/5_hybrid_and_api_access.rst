@@ -2,20 +2,35 @@
 Switching to Hybrid Flow and adding API Access back
 ===================================================
 
-In the previous quickstarts we explored both API access and user authentication.
-Now we want to bring the two parts together.
+The following Identity Server 4 quickstart provides step by step instructions for various common IdentityServer scenarios. These start with the absolute basics and become more complex as they progress. We recommend that you follow them in sequence.  To see the full list of please go to `IdentityServer4 Quickstarts Overview <https://identityserver4.readthedocs.io/en/latest/quickstarts/0_overview.html>`
 
-The beauty of the OpenID Connect & OAuth 2.0 combination is, that you can achieve both with
-a single protocol and a single exchange with the token service.
+This is quickstart number five Switching to Hybrid Flow and adding API Access back.  In the previous quickstarts we explored both API access and user authentication. Now we want to bring the two parts together.
 
-In the previous quickstart we used the OpenID Connect implicit flow.
-In the implicit flow all tokens are transmitted via the browser, which is totally fine for the identity token.
-Now we also want to request an access token.
+The beauty of the OpenID Connect & OAuth 2.0 combination is, that you can achieve both with a single protocol and a single exchange with the token service.
 
-Access tokens are a bit more sensitive than identity tokens, and we don't want to expose them to the "outside" world if not needed.
-OpenID Connect includes a flow called "Hybrid Flow" which gives us the best of both worlds, 
-the identity token is transmitted via the browser channel, so the client can validate it before doing any more work.
-And if validation is successful, the client opens a back-channel to the token service to retrieve the access token.
+In the previous quickstart we used the OpenID Connect implicit flow. In the implicit flow all tokens are transmitted via the browser, which is totally fine for the identity token. Now we also want to request an access token.
+
+Access tokens are a bit more sensitive than identity tokens (id_tokens), and we don't want to expose them to the "outside" world if we can avoid it.
+OpenID Connect includes a flow called "Hybrid Flow" which gives us the best of both worlds, the identity token is transmitted via the browser channel, so the client can validate it before doing any more work.
+If validation is successful, the client opens a back-channel to the token service to retrieve the access token.
+
+This quickstart assumes that you have already completed the previous four quickstarts. If you have not we recommend that you go back and complete them first before moving on to this quickstart.
+
+Source Code
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+As with all of these quickstarts you can find the source code for it in the `IdentityServer4.Samples <https://github.com/IdentityServer/IdentityServer4.Samples>`_ project.  
+The project for this quickstart is `Quickstart #5: OpenID Connect Hybrid Flow Authentication and API Access Tokens <https://github.com/IdentityServer/IdentityServer4.Samples/tree/master/Quickstarts/5_HybridFlowAuthenticationWithApiAccess>`_
+
+Preparation
+^^^^^^^^^^^
+In order to make following these quickstarts easer for you the team has created some custom templates for dotnet new.  
+
+To install the custom templates open a console window and type the following command::
+
+    dotnet new -i IdentityServer4.Templates
+
+They will be used as a starting point for the various tutorials.
 
 Modifying the client configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
