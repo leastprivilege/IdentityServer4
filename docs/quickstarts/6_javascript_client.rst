@@ -1,11 +1,33 @@
 .. _refJavaScriptQuickstart:
 Adding a JavaScript client
 ==========================
+The following Identity Server 4 quickstart provides step by step instructions for various common IdentityServer scenarios. These start with the absolute basics and become more complex as they progress. We recommend that you follow them in sequence.  To see the full list of please go to `IdentityServer4 Quickstarts Overview <https://identityserver4.readthedocs.io/en/latest/quickstarts/0_overview.html>`
 
-This quickstart will show how to build a browser-based JavaScript client application (sometimes referred to as a "`SPA`").
+
+This quickstart number six Adding a JavaScript client and will show you how to build a browser-based JavaScript client application (sometimes referred to as a "`SPA`").
 
 The user will login to IdentityServer, invoke the web API with an access token issued by IdentityServer, and logout of IdentityServer. 
 All of this will be driven from the JavaScript running in the browser.
+
+This quickstart assumes that you have already completed the previous four quickstarts. If you have not we recommend that you go back and complete them first before moving on to this quickstart.
+
+Source Code
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+As with all of these quickstarts you can find the source code for it in the `IdentityServer4.Samples <https://github.com/IdentityServer/IdentityServer4.Samples>`_ project.  
+The project for this quickstart is `Quickstart #6: Adding a JavaScript client <https://github.com/IdentityServer/IdentityServer4.Samples/tree/master/Quickstarts/6_JavaScriptClient>`_
+
+Preparation
+^^^^^^^^^^^
+In order to make following these quickstarts easer for you the team has created some custom templates for dotnet new.  
+
+To install the custom templates open a console window and type the following command::
+
+    dotnet new -i IdentityServer4.Templates
+
+They will be used as a starting point for the various tutorials.
+
+
 
 New Project for the JavaScript client
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
