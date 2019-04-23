@@ -39,7 +39,7 @@ This will create the following files:
 * ``Program.cs`` and ``Startup.cs`` - the main application entry point
 * ``Config.cs`` - IdentityServer resources and clients configuration file
 
-You can now use your favourite text editor to edit or view the files. If you want to have Visual Studio support, you can add a solution file like this::
+You can now use your favorite text editor to edit or view the files. If you want to have Visual Studio support, you can add a solution file like this::
 
     cd ..
     dotnet new sln -n Quickstart
@@ -55,7 +55,7 @@ Defining an API Resource
 ^^^^^^^^^^^^^^^^^^^^^^^^
 An API is a resource in your system that you want to protect.
 
-Resource definitions can be loaded in many ways, the template uses a "code as configuration" appproach.
+Resource definitions can be loaded in many ways, the template uses a "code as configuration" approach.
 In the [``Config.cs``](https://github.com/IdentityServer/IdentityServer4.Samples/blob/master/Quickstarts/1_ClientCredentials/src/IdentityServer/Config.cs) file you can find a method called ``GetApis``, define the API as follows::
 
     public static IEnumerable<ApiResource> GetApis()
