@@ -30,8 +30,10 @@ Just like there are in-memory stores for resources (aka scopes) and clients, the
 
 .. note:: Check the ASP.NET Identity based quickstarts for more information on how to properly store and manage user accounts.
 
-The class ``TestUser`` represents a test user and its claims. Let's create a couple of users
-by adding the following code to our config class:
+This Quickstart uses the code that you created in the previous quickstart as a starting point.   Open the Identityserver4 project you created in the last quickstart and lets begin.
+
+
+The class ``TestUser`` represents a test user and its claims. Let's create a couple of users by adding the following code to our config class:
 
 First add the following using statement to the ``Config.cs`` file::
 
@@ -56,7 +58,7 @@ First add the following using statement to the ``Config.cs`` file::
         };
     }
 
-Then register the test users with IdentityServer::
+Then register the test users in the IdentityServer.  To do this open the Startup.cs file and add the following to the ConfigureServices method::
 
     public void ConfigureServices(IServiceCollection services)
     {
@@ -80,7 +82,7 @@ You could simply add support for the grant type to our existing client by changi
 that is absolutely supported.
 
 We are creating a separate client for the resource owner use case,
-add the following to your clients configuration::
+add the following to your clients configuration (Config.cs)::
 
     public static IEnumerable<Client> GetClients()
     {
@@ -105,7 +107,32 @@ add the following to your clients configuration::
 
 Requesting a token using the password grant
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Add a new console client to your solution.
+Add a new console client to your solution.  For that, add a console project to your solution, remember to create it in the ``src``::
+
+    dotnet new console -n ResourceOwnerClient
+    
+Then as before, add it to your solution using::
+
+    cd ..
+    dotnet sln add .\src\Client\ResourceOwnerClient.csproj
+    
+Open up ``Program.cs`` and copy the content from `here <https://github.com/IdentityServer/IdentityServer4.Samples/blob/master/Quickstarts/2_ResourceOwnerPasswords/src/ResourceOwnerClient/Program.cs>`_ to it..
+
+The client program invokes the ``Main`` method asynchronously in order to run asynchronous http calls. This feature is possible since ``C# 7.1`` and will be available once you edit Client.csproj to add the following line as a ``PropertyGroup``::
+
+    <LangVersion>latest</LangVersion>
+
+The token endpoint at IdentityServer implements the OAuth 2.0 protocol, and you could use raw HTTP to access it. However, we have a client library called IdentityModel, that encapsulates the protocol interaction in an easy to use API.
+
+Add the `IdentityModel` NuGet package to your client. 
+This can be done either via Visual Studio's Nuget Package manager or though the package manager Console with the following command::
+
+    Install-Package IdentityModel
+
+or by using the CLI::
+
+    dotnet add package IdentityModel
+
 
 The new client looks very similar to what we did for the client credentials grant.
 The main difference is now that the client would collect the user's password somehow,
@@ -140,3 +167,21 @@ This "sub" claim can be seen by examining the content variable after the call to
 
 The presence (or absence) of the ``sub`` claim lets the API distinguish between calls on behalf
 of clients and calls on behalf of users.
+
+Further experiments
+^^^^^^^^^^^^^^^^^^^
+This walkthrough focused on the success path so far
+
+* user was able to login
+* a token containg the users subject id was returned.
+* client could use the token to access the API
+
+You can now try to provoke errors to learn how the system behaves, e.g.
+
+* try to connect to IdentityServer when it is not running (unavailable)
+* try to use an invalid client id or secret to request the token
+* try to ask for an invalid scope during the token request
+* try to call the API when it is not running (unavailable)
+* don't send the token to the API
+* configure the API to require a different scope than the one in the token
+* try logging in with an invalid user name and/or password.
