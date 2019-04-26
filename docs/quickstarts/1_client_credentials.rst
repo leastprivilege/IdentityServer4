@@ -55,7 +55,7 @@ Defining an API Resource
 ^^^^^^^^^^^^^^^^^^^^^^^^
 An API is a resource in your system that you want to protect. Resource definitions can be loaded in many ways, the template you used to create the project above shows how to uses a "code as configuration" approach.
 
-Open the project that we just created above in your favorite editor.  Find the [``Config.cs``](https://github.com/IdentityServer/IdentityServer4.Samples/blob/master/Quickstarts/1_ClientCredentials/src/IdentityServer/Config.cs) file you can find a method called ``GetApis``, define the API as follows::
+Open the project that we just created above in your favorite editor.  Find the `Config.cs <https://github.com/IdentityServer/IdentityServer4.Samples/blob/master/Quickstarts/1_ClientCredentials/src/IdentityServer/Config.cs>`_ file you can find a method called ``GetApis``, define the API as follows::
 
     public static IEnumerable<ApiResource> GetApis()
     {
@@ -82,7 +82,7 @@ The next step is to define a client application that we will use to access our n
 
 For this scenario, the client will not have an interactive user, and will authenticate using the so called client secret with IdentityServer.
 
-Once again open the [``Config.cs``](https://github.com/IdentityServer/IdentityServer4.Samples/blob/master/Quickstarts/1_ClientCredentials/src/IdentityServer/Config.cs)  file and add the following code to it::
+Once again open the `Config.cs <https://github.com/IdentityServer/IdentityServer4.Samples/blob/master/Quickstarts/1_ClientCredentials/src/IdentityServer/Config.cs>`_  file and add the following code to it::
 
     public static IEnumerable<Client> GetClients()
     {
@@ -112,7 +112,7 @@ You can think of the ClientId and the ClientSecret as the login and password for
 	
 Configuring IdentityServer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
-Loading the resource and client definitions happens in [``Startup.cs``](https://github.com/IdentityServer/IdentityServer4.Samples/blob/master/Quickstarts/1_ClientCredentials/src/IdentityServer/Startup.cs) - the template already does this for you::
+Loading the resource and client definitions happens in `Startup.cs <https://github.com/IdentityServer/IdentityServer4.Samples/blob/master/Quickstarts/1_ClientCredentials/src/IdentityServer/Startup.cs>`_ - the template already does this for you::
 
     public void ConfigureServices(IServiceCollection services)
     {
@@ -146,13 +146,13 @@ Then add it to the solution by running the following commands::
     cd ..
     dotnet sln add .\src\Api\Api.csproj
 
-Configure the API application to run on ``http://localhost:5001`` only. You can do this by editing the [`launchSettings.json`](https://github.com/IdentityServer/IdentityServer4.Samples/blob/master/Quickstarts/1_ClientCredentials/src/IdentityServer/Properties/launchSettings.json) file inside the Properties folder. Change the application URL setting to be::
+Configure the API application to run on ``http://localhost:5001`` only. You can do this by editing the `launchSettings.json` <https://github.com/IdentityServer/IdentityServer4.Samples/blob/master/Quickstarts/1_ClientCredentials/src/IdentityServer/Properties/launchSettings.json>`_ file inside the Properties folder. Change the application URL setting to be::
 
     "applicationUrl": "http://localhost:5001"
 
 The controller
 --------------
-Add a new folder ``Controllers`` and a new controller ``IdentityController`` (note: if you are using Visual Studio select ``API controller empty``) to your API project::
+Add a new folder ``Controllers`` and a new controller ``IdentityController`` (note: if you are using Visual Studio select ``API controller empty``>`_ to your API project::
 
     [Route("identity")]
     [Authorize]
