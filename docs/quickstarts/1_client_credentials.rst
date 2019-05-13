@@ -2,9 +2,9 @@
 Protecting an API using Client Credentials
 ==========================================
 
-The following Identity Server 4 quickstart provides step by step instructions for various common IdentityServer scenarios. These start with the absolute basics and become more complex as they progress. We recommend that you follow them in sequence.  To see the full list of please go to `IdentityServer4 Quickstarts Overview <https://identityserver4.readthedocs.io/en/latest/quickstarts/0_overview.html>`
+The following Identity Server 4 quickstart provides step by step instructions for various common IdentityServer scenarios. These start with the absolute basics and become more complex as they progress. We recommend that you follow them in sequence.  To see the full list of please go to `IdentityServer4 Quickstarts Overview <https://identityserver4.readthedocs.io/en/latest/quickstarts/0_overview.html>`_
 
-This is quickstart number one it presents the most basic scenario for protecting APIs using IdentityServer. In this quickstart you define an API and a Client with which to access it. The client will request an access token from the IdentityServer by providing a ``ClientCredentials`` which acts as a secret known to both the client and IdentityServer and it will use the token to gain access to the API.
+This is quickstart number one it presents the most basic scenario for protecting APIs using IdentityServer 4. In this quickstart you define an API and a Client with which to access it. The client will request an access token from the Identity Server by providing a ``ClientCredentials`` which acts as a secret known to both the client and identity server and it will use the token to gain access to the API.
 
 Source Code
 ^^^^^^^^^^^
@@ -48,7 +48,7 @@ and let it add your IdentityServer project (keep this command in mind as we will
 
     dotnet sln add .\src\IdentityServer\IdentityServer.csproj
 
-.. note:: The protocol used in this Template is ``http`` and the port is set to 5000 when running on Kestrel or a random one on IISExpress. You can change that in the ``Properties\launchSettings.json`` file. However, all of the quickstart instructions will assume you use the default port on Kestrel as well as the ``http`` protocol, which is sufficient for local development.
+.. note:: The protocol used in this Template is ``http`` and the port is set to 5000 when running on Kestrel or a random one on IISExpress. You can change that in the ``Properties\launchSettings.json`` file. However, all of the quickstart instructions will assume you use the default port on Kestrel as well as the ``http`` protocol, which is sufficient for local development.  You should not run identity server ``http`` in a production enviroment ``http`` should only be used for testing.
 
 
 Defining an API Resource
