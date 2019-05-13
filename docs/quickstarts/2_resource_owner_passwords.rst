@@ -159,6 +159,12 @@ Again IdentityModel can help out here::
     }
 
     Console.WriteLine(tokenResponse.Json);
+    
+The output should look like this:
+
+.. image:: images/2_client_screenshot.png
+
+.. note:: By default an access token will contain claims about the scope, lifetime (nbf and exp), the client ID (client_id) and the issuer name (iss).    
 
 When you send the token to the identity API endpoint, you will notice one small
 but important difference compared to the client credentials grant. The access token will
@@ -167,6 +173,8 @@ This "sub" claim can be seen by examining the content variable after the call to
 
 The presence (or absence) of the ``sub`` claim lets the API distinguish between calls on behalf
 of clients and calls on behalf of users.
+
+.. note:: The ``sub`` claim can also be called ``http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier``
 
 Further experiments
 ^^^^^^^^^^^^^^^^^^^
