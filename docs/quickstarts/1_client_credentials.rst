@@ -48,7 +48,7 @@ and let it add your IdentityServer project (keep this command in mind as we will
 
     dotnet sln add .\src\IdentityServer\IdentityServer.csproj
 
-.. note:: The protocol used in this Template is ``http`` and the port is set to 5000 when running on Kestrel or a random one on IISExpress. You can change that in the ``Properties\launchSettings.json`` file. However, all of the quickstart instructions will assume you use the default port on Kestrel as well as the ``http`` protocol, which is sufficient for local development.
+.. note:: The protocol used in this Template is ``http`` and the port is set to 5000 when running on Kestrel or a random one on IISExpress. You can change that in the ``Properties\launchSettings.json`` file. However, all of the quickstart instructions will assume you use the default port on Kestrel as well as the ``http`` protocol, which is sufficient for local development.  You should not run identity server ``http`` in a production enviroment ``http`` should only be used for testing.
 
 
 Defining an API Resource
