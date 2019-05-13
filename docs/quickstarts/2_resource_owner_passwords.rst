@@ -2,7 +2,7 @@
 Protecting an API using Passwords
 =================================
 
-The following Identity Server 4 quickstart provides step by step instructions for various common IdentityServer scenarios. These start with the absolute basics and become more complex as they progress. We recommend that you follow them in sequence.  To see the full list of please go to `IdentityServer4 Quickstarts Overview <https://identityserver4.readthedocs.io/en/latest/quickstarts/0_overview.html>`
+The following Identity Server 4 quickstart provides step by step instructions for various common IdentityServer scenarios. These start with the absolute basics and become more complex as they progress. We recommend that you follow them in sequence.  To see the full list of please go to `IdentityServer4 Quickstarts Overview <https://identityserver4.readthedocs.io/en/latest/quickstarts/0_overview.html>`_
 
 This is quickstart number two it walks you though the OAuth 2.0 resource owner password grant type.  This grant type allows a client to send username and password to the token service and get an access token back that represents that user.  The spec generally recommends against using the resource owner password grant besides legacy applications that cannot host a browser. Generally speaking you are typically far better off using one of the interactive OpenID Connect flows when you want to authenticate a user and request access tokens.
 
