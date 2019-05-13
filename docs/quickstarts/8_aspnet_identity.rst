@@ -1,7 +1,7 @@
 .. _refAspNetIdentityQuickstart:
 Using ASP.NET Core Identity
 ===========================
-The following Identity Server 4 quickstart provides step by step instructions for various common IdentityServer scenarios. These start with the absolute basics and become more complex as they progress. We recommend that you follow them in sequence.  To see the full list of please go to `IdentityServer4 Quickstarts Overview <https://identityserver4.readthedocs.io/en/latest/quickstarts/0_overview.html>`
+The following Identity Server 4 quickstart provides step by step instructions for various common IdentityServer scenarios. These start with the absolute basics and become more complex as they progress. We recommend that you follow them in sequence.  To see the full list of please go to `IdentityServer4 Quickstarts Overview <https://identityserver4.readthedocs.io/en/latest/quickstarts/0_overview.html>`_
 
 This is quickstart number eight Using ASP.NET Core Identity in this quickstart we show how IdentityServer is designed for flexibility and part of that is allowing you to use any database you want for your users and their data (including passwords).
 If you are starting with a new user database, then ASP.NET Identity is one option you could choose.
