@@ -8,7 +8,7 @@ This is quickstart number three Adding User Authentication with OpenID Connect. 
 
 This quickstart assumes that you have already completed `Adding User Authentication with OpenID Connect <https://identityserver4.readthedocs.io/en/latest/quickstarts/3_interactive_login.html>`_ if you have not we recommend that you go back and complete that first before moving on to this quickstart.
 
- Source Code
+Source Code
 ^^^^^^^^^^^
 
 As with all of these quickstarts you can find the source code for it in the `IdentityServer4.Samples <https://github.com/IdentityServer/IdentityServer4.Samples>`_ project.  
