@@ -2,7 +2,7 @@
 Adding User Authentication with OpenID Connect
 ==============================================
 
-The following Identity Server 4 quickstart provides step by step instructions for various common IdentityServer scenarios. These start with the absolute basics and become more complex as they progress. We recommend that you follow them in sequence.  To see the full list of please go to `IdentityServer4 Quickstarts Overview <https://identityserver4.readthedocs.io/en/latest/quickstarts/0_overview.html>`
+The following Identity Server 4 quickstart provides step by step instructions for various common IdentityServer scenarios. These start with the absolute basics and become more complex as they progress. We recommend that you follow them in sequence.  To see the full list of please go to `IdentityServer4 Quickstarts Overview <https://identityserver4.readthedocs.io/en/latest/quickstarts/0_overview.html>`_
 
 This is quickstart number three Adding User Authentication with OpenID Connect. In this quickstart you will add support for interactive user authentication via the OpenID Connect protocol to our IdentityServer.  Once that is in place, you will create an MVC application that will use IdentityServer for authentication.
 
